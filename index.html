@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiza Kuvavala — Premium Pharmacist CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root{
+    --bg-1: #f5f1ec;
+    --card-bg: #ffffff;
+    --accent: #b68a3a; /* warm gold */
+    --muted: #6b6b6b;
+    --navy: #071226;
+    --soft-shadow: 0 12px 40px rgba(7,18,38,0.12), 0 2px 6px rgba(7,18,38,0.06);
+  }
+
+  body{
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: radial-gradient(1200px 400px at 10% 10%, rgba(182,138,58,0.04), transparent), var(--bg-1);
+    display: flex; align-items: center; justify-content: center;
+    padding: 56px 20px; color: #111;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+
+  .page{
+    width: 900px; max-width: calc(100% - 40px);
+    background: linear-gradient(180deg, var(--card-bg), #faf8f5);
+    display: grid; grid-template-columns: 300px 1fr; gap: 0;
+    border-radius: 14px; overflow: hidden; box-shadow: var(--soft-shadow);
+    border-top: 6px solid rgba(182,138,58,0.95);
+  }
+
+  /* SIDEBAR */
+  .sidebar{
+    background: linear-gradient(180deg, #071226, #0b2233);
+    color: #f6efe6; padding: 56px 36px; display:flex; flex-direction:column; gap:32px;
+  }
+
+  .avatar-wrap{ display:flex; flex-direction:column; align-items:center; gap:14px; }
+
+  .avatar{
+    width:220px; height:220px; border-radius:0; display:flex; align-items:center; justify-content:center;
+    font-family: 'Playfair Display', serif; font-size:46px; color:var(--navy);
+    background: linear-gradient(135deg, rgba(182,138,58,0.13), rgba(255,255,255,0.02));
+    border: none; box-shadow: 0 6px 22px rgba(7,18,38,0.25);
+    overflow: hidden; padding: 0.5rem; box-sizing: border-box;
+  }
+
+  .avatar img{ width:100%; height:100%; object-fit:cover; display:block; border-radius:0; }
+
+  .name{ font-family: 'Playfair Display', serif; font-size:22px; font-weight:600; color:#fff; text-align:center; line-height:1.1; }
+
+  .title-tag{ font-size:11px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,234,184,0.95); }
+
+  .s-section{ display:flex; flex-direction:column; gap:12px; }
+
+  .s-label{ font-size:10px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,234,184,0.9); border-bottom:1px solid rgba(255,255,255,0.04); padding-bottom:8px; }
+
+  .contact-item{ font-size:13px; color:rgba(255,255,255,0.9); line-height:1.6; }
+  .contact-icon{ margin-right:10px; color:var(--accent); }
+
+  .skill-card{ backgroun
+    d: rgba(255,255,255,0.03); border-radius:10px; padding:12px; display:flex; gap:12px; align-items:flex-start; border:1px solid rgba(255,255,255,0.03); }
+  .skill-card:hover{ transform:translateY(-3px); transition:transform .22s ease; box-shadow: 0 8px 18px rgba(7,18,38,0.14); }
+
+  .skill-icon{ font-size:18px; }
+  .skill-name{ font-weight:600; color:#fff; font-size:14px; }
+  .skill-desc{ font-size:12px; color:rgba(255,255,255,0.75); }
+  .skill-badge{ margin-left:auto; background:transparent; border:1px solid rgba(182,138,58,0.9); color:rgba(255,234,184,0.95); padding:4px 8px; border-radius:6px; font-size:11px; }
+
+  .lang-chips{ display:flex; gap:8px; flex-wrap:wrap; }
+  .lang-chip{ background:rgba(255,255,255,0.03); color:rgba(255,255,255,0.9); padding:6px 12px; border-radius:999px; font-size:13px; border:1px solid rgba(255,255,255,0.03); }
+
+  /* MAIN */
+  .main{ padding:56px 48px; display:flex; flex-direction:column; gap:36px; }
+
+  .main-header{ display:flex; flex-direction:column; gap:6px; }
+  .main-header h1{ font-family:'Playfair Display', serif; font-size:48px; line-height:1; color:var(--navy); }
+  .main-header h2{ font-size:14px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); }
+
+  .section{ display:flex; flex-direction:column; gap:14px; }
+  .section-title{ font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--navy); display:flex; align-items:center; gap:12px; }
+  .section-title::after{ content:''; flex:1; height:1px; background:linear-gradient(90deg, rgba(7,18,38,0.06), rgba(182,138,58,0.08)); }
+
+  .objective-text{ font-size:15px; line-height:1.8; color:#333; padding:14px 18px; border-left:4px solid var(--accent); background:linear-gradient(180deg, rgba(182,138,58,0.03), transparent); border-radius:8px; }
+
+  .exp-item{ display:flex; flex-direction:column; gap:8px; }
+  .exp-header{ display:flex; justify-content:space-between; align-items:baseline; }
+  .exp-company{ font-weight:600; color:var(--navy); font-size:16px; }
+  .exp-date{ color:var(--muted); font-size:13px; }
+  .exp-role{ color:var(--accent); font-size:13px; font-weight:600; }
+
+  .exp-bullets{ margin-top:6px; display:flex; flex-direction:column; gap:8px; }
+  .exp-bullet{ display:flex; gap:12px; color:#444; line-height:1.6; }
+  .bullet-dot{ width:8px; height:8px; border-radius:50%; background:var(--accent); margin-top:6px; flex-shrink:0; }
+
+  .edu-item{ display:flex; justify-content:space-between; align-items:flex-start; }
+  .edu-degree{ font-weight:600; color:#333; }
+  .edu-college{ color:var(--muted); }
+  .edu-year{ color:var(--muted); }
+  .edu-cgpa{ color:var(--navy); font-weight:600; }
+
+  .pub-title{ font-style:italic; color:var(--navy); font-weight:600; }
+  .pub-desc{ color:#444; }
+  .pub-link{ display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:10px 14px; border-radius:999px; border:1px solid rgba(182,138,58,0.2); background: rgba(182,138,58,0.08); color: #111; text-decoration:none; font-weight:600; transition: transform 0.22s ease, box-shadow 0.22s ease; }
+  .pub-link:hover{ transform:translateY(-2px); box-shadow: 0 10px 22px rgba(182,138,58,0.16); background: rgba(182,138,58,0.15); }
+  .pub-link::before{ content:'🌐'; }
+
+  .skills-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px 28px; }
+  .skill-tag{ display:flex; align-items:center; gap:10px; color:#333; font-size:14px; }
+  .skill-dot{ width:8px; height:8px; border-radius:50%; background:var(--accent); }
+
+  @media (max-width:920px){ .page{ grid-template-columns: 1fr; width: 760px; } .sidebar{ order:2; } .main{ order:1; } }
+  @media print{ body{ background:white; padding:0 } .page{ box-shadow:none; border-top:0 } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="avatar-wrap">
+      <div class="avatar">
+        <img src="https://iili.io/C33v4ZN.jpg" alt="Profile photo">
+      </div>
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">Contact</div>
+      <div class="contact-item">
+        <span class="contact-icon">✉</span>
+        fizakuvavala77@gmail.com
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">☎</span>
+        +91 9328776004
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">⌂</span>
+        Koshit Street, Gandevi,<br>Gujarat – 396360
+      </div>
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">Core Skills</div>
+
+      <div class="skill-card">
+        <div class="skill-icon">💊</div>
+        <div class="skill-info">
+          <div class="skill-name">Prescription Handling</div>
+          <div class="skill-desc">Dispensing, labelling & verification with zero error tolerance</div>
+        </div>
+        <div class="skill-badge">Expert</div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🩺</div>
+        <div class="skill-info">
+          <div class="skill-name">Patient Counselling</div>
+          <div class="skill-desc">Dosage guidance, side effects & empathetic communication</div>
+        </div>
+        <div class="skill-badge">Expert</div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">⚗️</div>
+        <div class="skill-info">
+          <div class="skill-name">Drug Interaction Check</div>
+          <div class="skill-desc">Identifying contraindications & therapeutic conflicts</div>
+        </div>
+        <div class="skill-badge">Advanced</div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">📦</div>
+        <div class="skill-info">
+          <div class="skill-name">Inventory Management</div>
+          <div class="skill-desc">Stock control, expiry tracking & procurement</div>
+        </div>
+        <div class="skill-badge">Advanced</div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">🧴</div>
+        <div class="skill-info">
+          <div class="skill-name">OTC Medication Guidance</div>
+          <div class="skill-desc">Advising on over-the-counter drugs & supplements</div>
+        </div>
+        <div class="skill-badge">Proficient</div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">💻</div>
+        <div class="skill-info">
+          <div class="skill-name">Computer & POS Systems</div>
+          <div class="skill-desc">Billing, records management & pharmacy software</div>
+        </div>
+        <div class="skill-badge">Proficient</div>
+      </div>
+
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">Languages</div>
+      <div class="lang-chips">
+        <span class="lang-chip">English</span>
+        <span class="lang-chip">Gujarati</span>
+        <span class="lang-chip">Hindi</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <div class="main-header">
+      <h1>Fiza<br>Kuvavala</h1>
+      <h2>B.Pharm · Clinical & Retail Pharmacist</h2>
+    </div>
+
+    <!-- OBJECTIVE -->
+    <div class="section">
+      <div class="section-title">Objective</div>
+      <p class="objective-text">
+        A dedicated and detail-oriented pharmacist seeking an environment that encourages professional growth, where I can apply my clinical knowledge, patient-counselling skills, and pharmacy expertise to deliver exceptional healthcare outcomes.
+      </p>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <div class="section-title">Experience</div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-company">Amrutam Multi-Speciality Hospital</div>
+          <div class="exp-date">Apr 2023 – Present</div>
+        </div>
+        <div class="exp-role">Pharmacist</div>
+        <div class="exp-bullets">
+          <div class="exp-bullet"><span class="bullet-dot"></span>Maintained prescription accuracy with zero dispensing errors, ensuring safe and correct medication delivery to patients.</div>
+          <div class="exp-bullet"><span class="bullet-dot"></span>Provided empathetic patient counselling on dosage, usage, and potential side effects for prescribed medications.</div>
+          <div class="exp-bullet"><span class="bullet-dot"></span>Optimized inventory management systems, reducing stock waste and ensuring timely availability of essential medicines.</div>
+          <div class="exp-bullet"><span class="bullet-dot"></span>Developed expertise in prescription handling, patient compliance monitoring, and healthcare technology tools.</div>
+          <div class="exp-bullet"><span class="bullet-dot"></span>Collaborated with clinical staff to ensure medication therapy aligned with treatment protocols.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADDITIONAL SKILLS -->
+    <div class="section">
+      <div class="section-title">Professional Skills</div>
+      <div class="skills-grid">
+        <div class="skill-tag"><span class="skill-dot"></span>Drug dispensing & labelling</div>
+        <div class="skill-tag"><span class="skill-dot"></span>Drug interaction checking</div>
+        <div class="skill-tag"><span class="skill-dot"></span>OTC medication advisory</div>
+        <div class="skill-tag"><span class="skill-dot"></span>Cold chain & storage management</div>
+        <div class="skill-tag"><span class="skill-dot"></span>Expiry tracking & stock rotation</div>
+        <div class="skill-tag"><span class="skill-dot"></span>Billing & POS system operation</div>
+        <div class="skill-tag"><span class="skill-dot"></span>Record keeping & documentation</div>
+        <div class="skill-tag"><span class="skill-dot"></span>Health & wellness advisory</div>
+        <div class="skill-tag"><span class="skill-dot"></span>Strong interpersonal & communication</div>
+        <div class="skill-tag"><span class="skill-dot"></span>Team collaboration & problem solving</div>
+        <div class="skill-tag"><span class="skill-dot"></span>Multilingual patient interaction</div>
+        <div class="skill-tag"><span class="skill-dot"></span>Attention to detail under pressure</div>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu-item">
+        <div class="edu-left">
+          <div class="edu-degree">Bachelor of Pharmacy (B.Pharm)</div>
+          <div class="edu-college">Smt. Bnb. Swaminarayan College of Pharmacy</div>
+        </div>
+        <div class="edu-right">
+          <div class="edu-year">2023</div>
+          <div class="edu-cgpa">CGPA: 8.00</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PUBLICATIONS -->
+    <div class="section">
+      <div class="section-title">Publications</div>
+      <div>
+        <div class="pub-title">Glycero, Gelatin Based Meloxicam Transdermal Patch — EPRA Journal</div>
+        <div class="pub-desc">Collaborated as part of a research team in the 8th semester to develop and evaluate a glycero-gelatin based Meloxicam transdermal patch, exploring novel drug delivery systems in pharmaceutical sciences.</div>
+        <a class="pub-link" href="https://www-ind.github.io/fiza/" target="_blank" rel="noopener">Personal website: www-ind.github.io/fiza</a>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+</body>
+</html>
